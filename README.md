@@ -1,2 +1,4 @@
 # obspace_server
-Obspace server
+run npm install
+
+then npm start
