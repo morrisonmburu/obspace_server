@@ -22,10 +22,13 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.json({ message: "Welcome To Rest Api." });
+    res.json({ message: "Welcome To Obspace Rest Api." });
 });
 
+//api routes
 require('./routes/user.routes.js')(app);
+require('./routes/admins.routes.js')(app);
+require('./routes/developer.routes.js')(app);
 
 server.listen(port, () => {
     console.log(`Server is running on ${port}.`);
